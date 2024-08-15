@@ -21,7 +21,7 @@ function LoginPage() {
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
 
-                    <Button btnClassName="sign-in-button" btnTxt="Sign in" />
+                    <Button btnClassName="btn sign-in-button" btnTxt="Sign in" />
 
                 </form>
             </section>
