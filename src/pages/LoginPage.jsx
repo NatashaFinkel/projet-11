@@ -10,11 +10,11 @@ const LoginPage = () => {
                 <form>
                     <div className="input-wrapper">
                         <label htmlFor="email">Username</label>
-                        <input type="email" id="email" required />
+                        <input type="email" id="email" autoComplete="email" required />
                     </div>
                     <div className="input-wrapper">
                         <label htmlFor="password">Password</label
-                        ><input type="password" id="password" required />
+                        ><input type="password" id="password" autoComplete="current-password" required />
                     </div>
                     <div className="input-remember">
                         <input type="checkbox" id="remember-me" />
