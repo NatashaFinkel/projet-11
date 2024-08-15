@@ -1,7 +1,7 @@
 import React from "react";
+import Button from "../components/Button";
 
-const LoginPage = () => {
-
+function LoginPage() {
     return (
         <main className="main bg-dark">
             <section className="sign-in-content">
@@ -21,7 +21,8 @@ const LoginPage = () => {
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
 
-                    <button type="submit" className="sign-in-button">Sign in</button>
+                    <Button btnClassName="sign-in-button" btnTxt="Sign in" />
+
                 </form>
             </section>
         </main>
