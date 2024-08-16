@@ -9,11 +9,9 @@ import Button from "../components/Button";
 
 function ProfilePage() {
     const dispatch = useDispatch();
-    const { isBeingEdited, name, token } = useSelector((state) => ({
-            isBeingEdited: state.profile.isBeingEdited,
-            name: state.profile.name,
-            token: state.authentication.token
-        }));
+    const token = useSelector(state => state.authentication.token);
+    const name = useSelector(state => state.profile.name);
+    const isBeingEdited = useSelector(state => state.profile.isBeingEdited);
 
     const [newUserName, setNewUserName] = useState('');
 
