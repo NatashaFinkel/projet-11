@@ -30,7 +30,7 @@ function Header() {
                             </a>
 
                             <a href="/" onClick={handleLogout}>
-                                <i className="fa fa-user-circle"></i>
+                                <i className="fa fa-sign-out"></i>
                                 Sign Out
                             </a>
                         </div>
