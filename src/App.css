@@ -52,9 +52,18 @@ body {
   color: #42b983;
 }
 
+.main-nav-div {
+  display: flex;
+  gap: 6px;
+}
+
 .main-nav-item {
   text-decoration: none;
   margin-right: 0.5rem;
+  display: flex;
+  gap: 6px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  align-items: center;
 }
 
 .main-nav-item:hover {

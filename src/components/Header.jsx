@@ -15,7 +15,7 @@ function Header() {
             dispatch(fetchProfile(token));
         }
     }, [dispatch, token]);
-    
+
     const handleLogout = () => {
         dispatch(logout());
     };
@@ -30,13 +30,13 @@ function Header() {
                             <h1 className="sr-only">Argent Bank</h1>
                         </a>
 
-                        <div>
+                        <div className="main-nav-div">
                             <a className="main-nav-item" href="/profile">
                                 <i className="fa fa-user-circle"></i>
                                 {userName}
                             </a>
 
-                            <a href="/" onClick={handleLogout}>
+                            <a className="main-nav-item" href="/" onClick={handleLogout}>
                                 <i className="fa fa-sign-out"></i>
                                 Sign Out
                             </a>
