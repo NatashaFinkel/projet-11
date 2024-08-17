@@ -26,7 +26,7 @@ function Header() {
                         <div>
                             <a className="main-nav-item" href="/profile">
                                 <i className="fa fa-user-circle"></i>
-                                { userName }
+                                {userName}
                             </a>
 
                             <a href="/" onClick={handleLogout}>
