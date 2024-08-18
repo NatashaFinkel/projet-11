@@ -43,7 +43,6 @@ function LoginPage() {
                     </div>
                     {error && <p>{error}</p>}
                     <Button btnClassName="btn sign-in-button" btnTxt="Sign in" btnDisabled={loading} btnOnClick={handleSubmit} />
-
                 </form>
             </section>
         </main>
