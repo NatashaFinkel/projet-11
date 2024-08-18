@@ -23,7 +23,6 @@ export const loginAsync = createAsyncThunk(
 );
 
 const authenticationSlice = createSlice({
-
     name: "authentication",
     initialState: {
         token: localStorage.getItem('Token') || sessionStorage.getItem('Token') || null,
