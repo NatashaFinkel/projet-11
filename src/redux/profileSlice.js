@@ -15,7 +15,6 @@ export const fetchProfile = createAsyncThunk(
                 }
             );
             const data = await response.json();
-            console.log(data.body);
             if (!response.ok) {
                 return rejectWithValue(data.message);
             }
@@ -29,7 +28,6 @@ export const fetchProfile = createAsyncThunk(
 export const saveNewUserName = createAsyncThunk(
     "profile/saveNewUserName",
     async ({ userName, userId, token }) => {
-
         const response = await fetch(
             "http://localhost:3001/api/v1/user/profile",
             {
@@ -43,7 +41,6 @@ export const saveNewUserName = createAsyncThunk(
         );
         const data = await response.json();
         if (response.ok) {
-            console.log(data);
             return data;
         } else {
             throw new Error('Failed to save user name');
