@@ -78,19 +78,18 @@ function ProfilePage() {
                                 disabled
                             />
                         </div>
-                        <div className="button-group">
-                            <button className="save-or-cancel-button" onClick={handleNameSave}>
-                                Save
-                            </button>
-                            <button className="save-or-cancel-button" onClick={handleCancelNameClick}>
-                                Cancel
-                            </button>
+                        <div className="btn-group">
+
+                            <Button btnClassName="btn save-or-cancel-btn" btnOnClick={handleNameSave} btnTxt="Save" />
+
+                            <Button btnClassName="btn save-or-cancel-btn" btnOnClick={handleCancelNameClick} btnTxt="Cancel" />
+
                         </div>
                     </div>
                 ) : (
                     <div>
                         <h1>Welcome back <br />{name.firstName} {name.lastName}!</h1>
-                        <Button btnClassName="edit-button" btnTxt="Edit Name" btnOnClick={handleEditBtn} />
+                        <Button btnClassName="btn" btnTxt="Edit Name" btnOnClick={handleEditBtn} />
                     </div>
                 )}
             </div>
