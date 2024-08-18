@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
+import RestrictedAccess from "./RestrictedAccess";
 import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
@@ -12,7 +13,9 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
-                <Route path="/profile" element={<ProfilePage />} />
+                <Route element={<RestrictedAccess />}>
+                    <Route path="/profile" element={<ProfilePage />} />
+                </Route>
             </Routes>
         </Router>
     )
