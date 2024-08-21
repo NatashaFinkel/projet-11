@@ -294,14 +294,14 @@ body {
   flex: 1;
 }
 
-.header {
+.editing-form-header {
   color: #fff;
   margin-bottom: 2rem;
   padding-top: 2%;
+}
 
-  h1 {
-    margin-top: 0px;
-  }
+.editing-form-header  h1 {
+  margin-top: 0px;
 }
 
 .transaction-button {

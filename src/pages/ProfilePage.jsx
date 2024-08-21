@@ -40,7 +40,7 @@ function ProfilePage() {
 
     return (
         <main className="main bg-dark">
-            <div className="header">
+            <div className="editing-form-header ">
                 {isBeingEdited ? (
                     <div className="edit-name-form">
                         <p className="edit-name-form-title">Edit user info</p>
