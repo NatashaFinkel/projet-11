@@ -27,21 +27,21 @@ function LoginPage() {
             <section className="sign-in-content">
                 <i className="fa fa-user-circle sign-in-icon"></i>
                 <h1>Sign In</h1>
-               <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <div className="input-wrapper">
                         <label htmlFor="email">Username</label>
-                        <input type="email" id="email" value={email} 
-                         onChange={(e) => setEmail(e.target.value)}autoComplete="on" required />
+                        <input type="email" id="email" value={email}
+                            onChange={(e) => setEmail(e.target.value)} autoComplete="on" required />
                     </div>
                     <div className="input-wrapper">
                         <label htmlFor="password">Password</label
-                        ><input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}autoComplete="current-password" required />
+                        ><input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" required />
                     </div>
                     <div className="input-remember">
                         <input type="checkbox" id="remember-me" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} />
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
-                    {error && <p>{error}</p>}
+                    {error && <p className="error-message">{error}</p>}
                     <Button btnClassName="btn sign-in-button" btnTxt="Sign in" btnDisabled={loading} btnOnClick={handleSubmit} />
                 </form>
             </section>
