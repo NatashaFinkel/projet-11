@@ -1,11 +1,8 @@
-import { React, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { editedName, fetchProfile } from "../redux/profileSlice";
-import { cancelEditedName, saveNewUserName } from "../redux/profileSlice";
-import { useState } from "react";
-import Account from "../components/Account";
+import { React, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { editedName, fetchProfile, cancelEditedName, saveNewUserName } from "../redux/profileSlice";
 import Button from "../components/Button";
+import Account from "../components/Account";
 
 function ProfilePage() {
     const dispatch = useDispatch();
