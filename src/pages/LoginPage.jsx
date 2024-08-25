@@ -1,9 +1,8 @@
 import { React, useState } from "react";
-import Button from "../components/Button";
-
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginAsync } from "../redux/authenticationSlice";
+import Button from "../components/Button";
 
 function LoginPage() {
     const [email, setEmail] = useState("");
