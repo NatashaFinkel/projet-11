@@ -53,15 +53,15 @@ const profileSlice = createSlice({
     initialState: {
         name: { firstName: "", lastName: "", userName: "" },
         status: "idle",
-        isBeingEdited: false,
+        isUserNameBeingEdited: false,
         error: null,
     },
     reducers: {
         editNameMode: (state) => {
-            state.isBeingEdited = true;
+            state.isUserNameBeingEdited = true;
         },
         cancelEditNameMode: (state) => {
-            state.isBeingEdited = false;
+            state.isUserNameBeingEdited = false;
         },
     },
     extraReducers: (builder) => {

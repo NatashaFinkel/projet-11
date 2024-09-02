@@ -8,7 +8,7 @@ function ProfilePage() {
     const dispatch = useDispatch();
     const token = useSelector(state => state.authentication.token);
     const name = useSelector(state => state.profile.name);
-    const isBeingEdited = useSelector(state => state.profile.isBeingEdited);
+    const isUserNameBeingEdited = useSelector(state => state.profile.isUserNameBeingEdited);
 
     const [newUserName, setNewUserName] = useState('');
 
@@ -38,7 +38,7 @@ function ProfilePage() {
     return (
         <main className="main bg-dark">
             <div className="editing-form-header ">
-                {isBeingEdited ? (
+                {isUserNameBeingEdited ? (
                     <div className="edit-name-form">
                         <p className="edit-name-form-title">Edit user info</p>
                         <div>
