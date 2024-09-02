@@ -27,7 +27,7 @@ function ProfilePage() {
             .then(() => dispatch(fetchProfile(token)))
             .then(() => dispatch(cancelEditNameMode()))
             .catch((error) => {
-                console.error('Failed to save new userName : ', error);
+                console.error('Failed to save new userName', error);
             });
     };
 
