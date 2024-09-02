@@ -57,10 +57,10 @@ const profileSlice = createSlice({
         error: null,
     },
     reducers: {
-        editedName: (state) => {
+        editNameMode: (state) => {
             state.isBeingEdited = true;
         },
-        cancelEditedName: (state) => {
+        cancelEditNameMode: (state) => {
             state.isBeingEdited = false;
         },
     },
@@ -95,5 +95,5 @@ const profileSlice = createSlice({
     },
 });
 
-export const { editedName, cancelEditedName } = profileSlice.actions;
+export const { editNameMode, cancelEditNameMode } = profileSlice.actions;
 export default profileSlice.reducer;

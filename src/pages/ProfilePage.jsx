@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { editedName, fetchProfile, cancelEditedName, saveNewUserName } from "../redux/profileSlice";
+import { editNameMode, fetchProfile, cancelEditNameMode, saveNewUserName } from "../redux/profileSlice";
 import Button from "../components/Button";
 import Account from "../components/Account";
 
@@ -19,20 +19,20 @@ function ProfilePage() {
     }, [dispatch, token]);
 
     const handleEditBtn = () => {
-        dispatch(editedName());
+        dispatch(editNameMode());
     };
 
     const handleNameSave = () => {
         dispatch(saveNewUserName({ userName: newUserName, userId: name.id, token: token }))
             .then(() => dispatch(fetchProfile(token)))
-            .then(() => dispatch(cancelEditedName()))
+            .then(() => dispatch(cancelEditNameMode()))
             .catch((error) => {
                 console.error('Failed to save new userName : ', error);
             });
     };
 
     const handleCancelNameClick = () => {
-        dispatch(cancelEditedName());
+        dispatch(cancelEditNameMode());
     };
 
     return (
