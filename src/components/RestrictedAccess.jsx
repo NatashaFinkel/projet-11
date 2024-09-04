@@ -5,9 +5,10 @@ import { Navigate, Outlet } from "react-router-dom";
 const RestrictedAccess = () => {
     const token = useSelector(state => state.authentication.token);
 
-    //  Si le token existe ( = utilisateur authentifié),
-    //  le composant Outlet ( = la route dont l'accès est protégé) est restitué.
-    //  Si le token n'existe pas, l'utilisateur est automatiquement redirigé vers la page login.
+    // if there is a token ( = authenticated user),
+    // the component Outlet ( = the route whose access is restricted) is rendered.
+    // If there is no token, the user is automatically redirected to the login page.
+
     return token ? <Outlet /> : <Navigate to="/login" />
 }
 
