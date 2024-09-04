@@ -52,6 +52,7 @@ const profileSlice = createSlice({
     name: "profile",
     initialState: {
         name: { firstName: "", lastName: "", userName: "" },
+        // "idle" means "inactive".
         status: "idle",
         isUserNameBeingEdited: false,
         error: null,
