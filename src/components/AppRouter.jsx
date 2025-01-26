@@ -8,7 +8,12 @@ import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
     return (
-        <Router>
+        <Router
+            future={{
+                v7_startTransition: true,
+                v7_relativeSplatPath: true,
+            }}
+        >
             <Header />
             <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -18,7 +23,8 @@ const AppRouter = () => {
                 </Route>
             </Routes>
         </Router>
-    )
-}
+    );
+};
+
 
 export default AppRouter;
