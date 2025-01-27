@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/P-11-version-2/my-app/static/css/main.beab236a.css",
+    "main.js": "/P-11-version-2/my-app/static/js/main.622b1946.js",
+    "static/js/453.ed3810f9.chunk.js": "/P-11-version-2/my-app/static/js/453.ed3810f9.chunk.js",
+    "static/media/bank-tree.jpeg": "/P-11-version-2/my-app/static/media/bank-tree.4d59987c7c62b024b014.jpeg",
+    "static/media/argentBankLogo.webp": "/P-11-version-2/my-app/static/media/argentBankLogo.3bd5ebd1560812c6626e.webp",
+    "index.html": "/P-11-version-2/my-app/index.html",
+    "main.beab236a.css.map": "/P-11-version-2/my-app/static/css/main.beab236a.css.map",
+    "main.622b1946.js.map": "/P-11-version-2/my-app/static/js/main.622b1946.js.map",
+    "453.ed3810f9.chunk.js.map": "/P-11-version-2/my-app/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.beab236a.css",
+    "static/js/main.622b1946.js"
+  ]
+}
