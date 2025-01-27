@@ -10,6 +10,8 @@ function Header() {
     const token = useSelector((state) => state.authentication.token);
     const userName = useSelector((state) => state.profile.name.userName);
 
+    const appBasename = process.env.PUBLIC_URL;
+
     useEffect(() => {
         if (token) {
             dispatch(fetchProfile(token));
@@ -25,18 +27,17 @@ function Header() {
             {token ? (
                 <>
                     <nav className="main-nav">
-                        <a className="main-nav-logo" href="/">
+                        <a className="main-nav-logo" href={appBasename + "/"}>
                             <Image imgClassName="main-nav-logo-image" imgSrc={headerImg} imgAlt="Argent Bank Logo" />
                             <h1 className="sr-only">Argent Bank</h1>
                         </a>
 
                         <div className="main-nav-div">
-                            <a className="main-nav-item" href="/profile">
+                            <a className="main-nav-item" href={appBasename + "/profile"}>
                                 <i className="fa fa-user-circle"></i>
                                 {userName}
                             </a>
-
-                            <a className="main-nav-item" href="/" onClick={handleLogout}>
+                            <a className="main-nav-item" href={appBasename + "/"} onClick={handleLogout}>
                                 <i className="fa fa-sign-out"></i>
                                 Sign Out
                             </a>
@@ -46,12 +47,12 @@ function Header() {
                 </>
             ) : (
                 <nav className="main-nav">
-                    <a className="main-nav-logo" href="/">
+                    <a className="main-nav-logo" href={appBasename + "/"}>
                         <Image imgClassName="main-nav-logo-image" imgSrc={headerImg} imgAlt="Argent Bank Logo" />
                         <h1 className="sr-only">Argent Bank</h1>
                     </a>
 
-                    <a className="main-nav-item" href="/login">
+                    <a className="main-nav-item" href={appBasename + "/login"}>
                         <i className="fa fa-user-circle"></i>
                         Sign in
                     </a>

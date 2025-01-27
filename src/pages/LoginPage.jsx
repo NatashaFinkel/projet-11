@@ -12,12 +12,14 @@ function LoginPage() {
     const navigate = useNavigate();
     const { loading, error } = useSelector((state) => state.authentication);
 
+    const appBasename = process.env.PUBLIC_URL;
+
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(loginAsync({ email, password, rememberMe }))
             .unwrap()
             .then(() => {
-                navigate("/profile");
+                navigate(appBasename + "/profile");
             })
             .catch(() => { });
     };
