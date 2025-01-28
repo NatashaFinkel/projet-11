@@ -11,8 +11,8 @@ const AppRouter = () => {
     function getCurrentUrl() {
         const URL = window.location.origin;
         let appBasename;
-        if (URL === "https://natashafinkel.github.io/P-11-version-2/") {
-            appBasename = URL + "/projet-11";
+        if (URL === "https://natashafinkel.github.io") {
+            appBasename = URL + "/P11-version-2/projet-11";
         } else {
             appBasename = "/P-11-version-2/projet-11";
         }
