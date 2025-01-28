@@ -47,12 +47,13 @@
         const redirectUrl = window.location.origin + "/P-11-version-2" + window.location.pathname;
         console.log(redirectUrl);
         const timeoutId = setTimeout(() => {
-            window.location.href = redirectUrl;
+              window.location.href = redirectUrl;
             console.log(redirectUrl);
         }, 1);
 
         clearTimeout(timeoutId);
     </script>
+    <meta http-equiv="refresh" content="0;URL={redirectUrl}">
     <title>React App</title>
 </head>
 
