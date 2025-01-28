@@ -7,10 +7,22 @@ import RestrictedAccess from "./RestrictedAccess";
 import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
-    const url = process.env.PUBLIC_URL;
-    console.log(url);
+
+    function getCurrentUrl() {
+        const URL = window.location.origin;
+        let appBasename;
+        if (URL === "https://natashafinkel.github.io/P-11-version-2/") {
+            appBasename = URL + "/projet-11";
+        } else {
+            appBasename = URL + "P-11-version-2/projet-11";
+        }
+        return appBasename;
+    }
+
+    const currentBasename = getCurrentUrl();
+
     return (
-        <Router basename="P-11-version-2/projet-11"
+        <Router basename={currentBasename}
             future={{
                 v7_startTransition: true,
                 v7_relativeSplatPath: true,
