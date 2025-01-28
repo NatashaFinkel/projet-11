@@ -8,20 +8,6 @@ import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
 
-    /*     function getCurrentUrl() {
-            let currentUrl = window.location.origin;
-            let routerBasename;
-    
-            if (currentUrl === "http://localhost:3000") {
-                routerBasename = process.env.PUBLIC_URL;
-            } else {
-                routerBasename = "https://natashafinkel.github.io/projet-11";
-            }
-            return routerBasename;
-        };
-    
-        const appBasename = getCurrentUrl(); */
-
     const appBasename = process.env.PUBLIC_URL;
     return (
         <Router
