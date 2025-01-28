@@ -14,7 +14,7 @@ const AppRouter = () => {
         if (URL === "https://natashafinkel.github.io/P-11-version-2/") {
             appBasename = URL + "/projet-11";
         } else {
-            appBasename = URL + "P-11-version-2/projet-11";
+            appBasename = "/P-11-version-2/projet-11";
         }
         return appBasename;
     }
