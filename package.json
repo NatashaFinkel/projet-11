@@ -18,11 +18,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "cp public/404.html build/public/404.html",
+    "postbuild": "cp public/404.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && cp public/404.html build/public/404.html",
-    "deploy": "gh-pages -d build && cp public/404.html build/public/404.html"
+    "predeploy": "npm run build && cp public/404.html build/404.html",
+    "deploy": "gh-pages -d build && cp public/404.html build/404.html"
   },
   "eslintConfig": {
     "extends": [
