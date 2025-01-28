@@ -7,13 +7,14 @@ import RestrictedAccess from "./RestrictedAccess";
 import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
+    const url = process.env.PUBLIC_URL;
+    console.log(url);
     return (
-        <Router basename="/P-11-version-2/projet-11"
+        <Router basename="P-11-version-2/projet-11"
             future={{
                 v7_startTransition: true,
                 v7_relativeSplatPath: true,
-            }}
-        >
+            }}>
             <Header />
             <Routes>
                 <Route path="/" element={<HomePage />} />
