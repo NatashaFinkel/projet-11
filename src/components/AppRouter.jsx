@@ -7,10 +7,8 @@ import RestrictedAccess from "./RestrictedAccess";
 import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
-
-    const appBasename = process.env.PUBLIC_URL;
     return (
-        <Router
+        <Router basename="/P-11-version-2/projet-11"
             future={{
                 v7_startTransition: true,
                 v7_relativeSplatPath: true,
@@ -18,10 +16,10 @@ const AppRouter = () => {
         >
             <Header />
             <Routes>
-                <Route path={appBasename + "/"} element={<HomePage />} />
-                <Route path={appBasename + "/login"} element={<LoginPage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
                 <Route element={<RestrictedAccess />}>
-                    <Route path={appBasename + "/profile"} element={<ProfilePage />} />
+                    <Route path="/profile" element={<ProfilePage />} />
                 </Route>
             </Routes>
         </Router>
