@@ -44,7 +44,7 @@
         );
     </script> -->
     <script>
-        const redirectUrl = window.location.origin + "/P-11-version-2";
+        const redirectUrl = window.location.origin + "/P-11-version-2" + window.location.pathname + window.location.search + window.location.hash;
         console.log(redirectUrl);
         setTimeout(() => {
             window.location.href = redirectUrl;
