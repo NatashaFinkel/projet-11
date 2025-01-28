@@ -7,7 +7,7 @@ import RestrictedAccess from "./RestrictedAccess";
 import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
-    
+
     function getCurrentUrl() {
         let currentUrl = window.location.origin;
         let routerBasename;
@@ -15,7 +15,7 @@ const AppRouter = () => {
         if (currentUrl === "http://localhost:3000") {
             routerBasename = process.env.PUBLIC_URL;
         } else {
-            routerBasename = "https://natashafinkel.github.io/projet-11/"
+            routerBasename = "https://natashafinkel.github.io/projet-11";
         }
         return routerBasename;
     };
