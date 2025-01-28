@@ -11,8 +11,8 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png">
 
     <!--  <meta http-equiv="refresh" content="0;URL=./index.html"> -->
-    <meta http-equiv="refresh" content="0;URL=./index.js">
-<!--     <script>
+    <meta http-equiv="refresh" content="0;URL=/">
+    <!--     <script>
         // Single Page Apps for GitHub Pages
         // https://github.com/rafrex/spa-github-pages
         // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
@@ -43,14 +43,16 @@
             l.hash
         );
     </script> -->
-  <!--   <script>
+    <script>
         const redirectUrl = window.location.origin + "/P-11-version-2" + window.location.pathname + window.location.search + window.location.hash;
         console.log(redirectUrl);
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             window.location.href = redirectUrl;
             console.log(redirectUrl);
-        }, 0);
-    </script> -->
+        }, 500);
+
+        clearTimeout(timeoutId);
+    </script>
     <title>React App</title>
 </head>
 
