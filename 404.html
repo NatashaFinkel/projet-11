@@ -46,10 +46,12 @@
     <script>
         const redirectUrl = window.location.origin + window.location.pathname;
         console.log(redirectUrl);
-        const timeoutId = setTimeout(() => {
-            window.location.href = redirectUrl;
-            console.log(redirectUrl);
-        }, 500);
+        /*  const timeoutId = setTimeout(() => {
+             window.location.href = redirectUrl;
+             console.log(redirectUrl);
+         }, 500); */
+
+        window.location.href = redirectUrl;
 
         clearTimeout(timeoutId);
     </script>
