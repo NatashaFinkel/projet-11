@@ -44,10 +44,9 @@
         );
     </script> -->
     <script>
-        const redirectUrl = window.location.origin + window.location.pathname;
-        console.log(redirectUrl);
-
         const timeoutId = setTimeout(() => {
+            const redirectUrl = window.location.origin + window.location.pathname;
+            console.log(redirectUrl);
             window.location.href = redirectUrl;
             console.log(redirectUrl);
         }, 2000);
