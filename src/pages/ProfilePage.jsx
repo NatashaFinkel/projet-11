@@ -1,16 +1,23 @@
 import { React, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { editNameMode, fetchProfile, cancelEditNameMode, saveNewUserName } from "../redux/profileSlice";
+import {
+    editNameMode,
+    fetchProfile,
+    cancelEditNameMode,
+    saveNewUserName,
+} from "../redux/profileSlice";
 import Button from "../components/Button";
 import Account from "../components/Account";
 
 function ProfilePage() {
     const dispatch = useDispatch();
-    const token = useSelector(state => state.authentication.token);
-    const name = useSelector(state => state.profile.name);
-    const isUserNameBeingEdited = useSelector(state => state.profile.isUserNameBeingEdited);
+    const token = useSelector((state) => state.authentication.token);
+    const name = useSelector((state) => state.profile.name);
+    const isUserNameBeingEdited = useSelector(
+        (state) => state.profile.isUserNameBeingEdited,
+    );
 
-    const [newUserName, setNewUserName] = useState('');
+    const [newUserName, setNewUserName] = useState("");
 
     useEffect(() => {
         if (token) {
@@ -23,11 +30,13 @@ function ProfilePage() {
     };
 
     const handleNameSave = () => {
-        dispatch(saveNewUserName({ userName: newUserName, userId: name.id, token: token }))
+        dispatch(
+            saveNewUserName({ userName: newUserName, userId: name.id, token: token }),
+        )
             .then(() => dispatch(fetchProfile(token)))
             .then(() => dispatch(cancelEditNameMode()))
             .catch((error) => {
-                console.error('Failed to save new userName', error);
+                console.error("Failed to save new userName", error);
             });
     };
 
@@ -76,24 +85,49 @@ function ProfilePage() {
                             />
                         </div>
                         <div className="btn-group">
+                            <Button
+                                btnClassName="btn save-or-cancel-btn"
+                                btnOnClick={handleNameSave}
+                                btnTxt="Save"
+                            />
 
-                            <Button btnClassName="btn save-or-cancel-btn" btnOnClick={handleNameSave} btnTxt="Save" />
-
-                            <Button btnClassName="btn save-or-cancel-btn" btnOnClick={handleCancelNameClick} btnTxt="Cancel" />
-
+                            <Button
+                                btnClassName="btn save-or-cancel-btn"
+                                btnOnClick={handleCancelNameClick}
+                                btnTxt="Cancel"
+                            />
                         </div>
                     </div>
                 ) : (
                     <div>
-                        <h1>Welcome back <br />{name.firstName} {name.lastName}!</h1>
-                        <Button btnClassName="btn" btnTxt="Edit Name" btnOnClick={handleEditBtn} />
+                        <h1>
+                            Welcome back <br />
+                            {name.firstName} {name.lastName}!
+                        </h1>
+                        <Button
+                            btnClassName="btn"
+                            btnTxt="Edit Name"
+                            btnOnClick={handleEditBtn}
+                        />
                     </div>
                 )}
             </div>
             <h2 className="sr-only">Accounts</h2>
-            <Account title="Argent Bank Checking (x8349)" amount="$2,082.79" description="Available Balance" />
-            <Account title="Argent Bank Savings (x6712)" amount="$10,928.42" description="Available Balance" />
-            <Account title="Argent Bank Credit Card (x8349)" amount="$184.30" description="Current Balance" />
+            <Account
+                title="Argent Bank Checking (x8349)"
+                amount="$2,082.79"
+                description="Available Balance"
+            />
+            <Account
+                title="Argent Bank Savings (x6712)"
+                amount="$10,928.42"
+                description="Available Balance"
+            />
+            <Account
+                title="Argent Bank Credit Card (x8349)"
+                amount="$184.30"
+                description="Current Balance"
+            />
         </main>
     );
 }
