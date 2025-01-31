@@ -8,7 +8,9 @@ import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
     return (
-        <Router>
+        <Router future={{
+            v7_startTransition: true,
+        }}>
             <Header />
             <Routes>
                 <Route path="/" element={<HomePage />} />
