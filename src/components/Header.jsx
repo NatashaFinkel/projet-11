@@ -26,7 +26,11 @@ function Header() {
                 <>
                     <nav className="main-nav">
                         <a className="main-nav-logo" href="/">
-                            <Image imgClassName="main-nav-logo-image" imgSrc={headerImg} imgAlt="Argent Bank Logo" />
+                            <Image
+                                imgClassName="main-nav-logo-image"
+                                imgSrc={headerImg}
+                                imgAlt="Argent Bank Logo"
+                            />
                             <h1 className="sr-only">Argent Bank</h1>
                         </a>
 
@@ -41,13 +45,16 @@ function Header() {
                                 Sign Out
                             </a>
                         </div>
-
                     </nav>
                 </>
             ) : (
                 <nav className="main-nav">
                     <a className="main-nav-logo" href="/">
-                        <Image imgClassName="main-nav-logo-image" imgSrc={headerImg} imgAlt="Argent Bank Logo" />
+                        <Image
+                            imgClassName="main-nav-logo-image"
+                            imgSrc={headerImg}
+                            imgAlt="Argent Bank Logo"
+                        />
                         <h1 className="sr-only">Argent Bank</h1>
                     </a>
 

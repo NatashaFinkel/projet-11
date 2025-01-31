@@ -13,7 +13,7 @@ function Account({ title, amount, description }) {
                 <Button btnClassName="btn transaction-button" btnTxt="View transactions" />
             </div>
         </section>
-    )
+    );
 }
 
 export default Account;

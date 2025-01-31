@@ -8,7 +8,7 @@ function FeatureItem({ imgSrc, imgAlt, featureItemTitle, featureItemP }) {
             <h3 className="feature-item-title">{featureItemTitle}</h3>
             <p>{featureItemP}</p>
         </div>
-    )
+    );
 }
 
 export default FeatureItem;
